@@ -29,7 +29,8 @@ class Scoreboard(Turtle):
     def reset(self):
         if self.score > self.high_score:
             self.high_score = self.score
-            # With keyword opens file and closes it when we are done with the program. Executes written-down functions.
+            # With keyword "open", opens file and closes it when we are done with the program.
+            # Executes written-down functions.
             with open("score.txt", mode="w") as file:
                 file.write(str(self.high_score))
 
