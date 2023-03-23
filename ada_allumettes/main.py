@@ -10,7 +10,7 @@ def remove_matches(matches_to_remove):
 
 def player_choice():
     global total_matches, is_game_on
-    player_input = int(input("Combien d'allumettes voulez-vous retirer ? Choisissez entre 1 et 6 : "))
+    player_input = int(input("Joueur 1, combien d'allumettes voulez-vous retirer ? Choisissez entre 1 et 6 : "))
     if total_matches == 0:
         is_game_on = False
         print("Vous avez gagné !")
@@ -22,6 +22,7 @@ def player_choice():
         else:
             print(new_total)
     else:
+        is_game_on = False
         print("Mauvais choix !")
 
 
