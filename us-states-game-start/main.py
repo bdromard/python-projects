@@ -22,10 +22,7 @@ while len(guessed_states) < 50:
                                     prompt="What's another state's name?").title()
     # Exit state, and that creates a .csv file with missed states by the player.
     if answer_state == "Exit":
-        missed_states = []
-        for state in all_states_list:
-            if state not in guessed_states:
-                missed_states.append(state)
+        missed_states = [state for state in all_states_list if state not in guessed_states]
         missed_states_as_df = pandas.DataFrame(missed_states)
         missed_states_as_df.to_csv()
         break

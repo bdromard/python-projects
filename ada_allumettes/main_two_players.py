@@ -36,3 +36,5 @@ def players_choice(player):
 while is_game_on:
     players_choice(1)
     players_choice(2)
+
+number = 0
