@@ -1,0 +1,4 @@
+# Ignore .env and project_config
+
+/.env
+/.project_config

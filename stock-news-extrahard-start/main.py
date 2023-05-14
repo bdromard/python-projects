@@ -1,18 +1,32 @@
 import requests as req
 import decouple
+import json
 
 STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 
 alphavantage_params = {
-    "function": "TIME_SERIES_DAILY",
+    "function": "TIME_SERIES_DAILY_ADJUSTED",
     "symbol": STOCK,
-    "apikey": decouple.config('AV_KEY')
+    "apikey": decouple.config('AV_KEY').strip()
 }
 
-print(alphavantage_params['apikey'])
+
 ## STEP 1: Use https://www.alphavantage.co
 # When STOCK price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
+
+# Utiliser un module pour déterminer data actuelle et comparer avec données de date choisie
+url = f'https://www.alphavantage.co/query?'
+response = req.get(url, params=alphavantage_params)
+response.raise_for_status()
+data = response.json()
+pretty_data = json.dumps(data, sort_keys=True, indent=4)
+with open('data.json', 'w') as file:
+    file.write(pretty_data)
+with open('data.json', 'r') as file:
+    data_json = json.load(file)
+    print(data_json["Time Series (Daily)"]["2022-12-19"]["4. close"])
+
 
 ## STEP 2: Use https://newsapi.org
 # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME. 
