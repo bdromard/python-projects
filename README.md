@@ -15,5 +15,5 @@ Projects and exercizes in Python, following Angela Yu's Udemy course "100 Days o
   <li>quizzler: Quiz game, with questions / answers acquired through API requests. Libraries: Requests, json, Tkinter.</li>
   <li>smtplib: Exercize on email automation, using SMTP protocol. Libraries: smtplib, pandas.</li>
   <li>us-states-game-start: Guessing game on U.S.A. states. Libraries: turtle, pandas.</li>
-  <li>stock-news-extrahard-start: Exercize on API requests.</li>
+  <li>stock-news-extrahard-start: Exercise on API requests. Combining a stock market API with a general news API.</li>
 </ul>
