@@ -27,7 +27,6 @@ with open('data.json', 'r') as file:
     data_json = json.load(file)
     print(data_json["Time Series (Daily)"]["2022-12-19"]["4. close"])
 
-
 ## STEP 2: Use https://newsapi.org
 # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME. 
 
