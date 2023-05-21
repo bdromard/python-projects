@@ -10,10 +10,11 @@ Projects and exercizes in Python, following Angela Yu's Udemy course "100 Days o
   <li>day-25-csv-weather: Introduction to CSV files manipulation with the library Pandas. </li>
   <li>day-27: Introduction to the Tkinter GUI library. Miles / kilometers converters ; testing different Tkinter widgets.</li>
   <li>flash-card-project-start: Application for English words memorizing, through the use of flash cards. Libraries: Tkinter, Pandas.</li>
+  <li>mastermind: Weekly exercize from Ada Tech School, made in Python. Recreation of the game Mastermind.</li>
   <li>password-manager-start: Application for managing passwords, with a password generating module. Libraries: Tkinter, json.</li>
   <li>pomodoro: Application for time management, using the Pomodoro technique for better focus. Library: Tkinter.</li>
   <li>quizzler: Quiz game, with questions / answers acquired through API requests. Libraries: Requests, json, Tkinter.</li>
   <li>smtplib: Exercize on email automation, using SMTP protocol. Libraries: smtplib, pandas.</li>
   <li>us-states-game-start: Guessing game on U.S.A. states. Libraries: turtle, pandas.</li>
-  <li>stock-news-extrahard-start: Exercize on API requests.</li>
+  <li>stock-news-extrahard-start: Exercise on API requests. Combining a stock market API with a general news API.</li>
 </ul>
