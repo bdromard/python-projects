@@ -18,7 +18,7 @@ class DataManager:
 
     def put_to_sheety(self, data):
         for element in data:
-            endpoint = f'{self.url}{element["id"]}'
+            endpoint = f'{self.url}prices/{element["id"]}'
             dict = {
                 'price': element
             }
@@ -26,14 +26,35 @@ class DataManager:
             response.raise_for_status()
 
     def get_data(self):
-        response = requests.get(url=self.url, headers=self.headers)
+        response = requests.get(url=f"{self.url}prices", headers=self.headers)
         data = response.json()
         return data
 
     def get_cities(self):
-        response_cities = requests.get(url=self.url, headers=self.headers)
+        response_cities = requests.get(url=f"{self.url}prices", headers=self.headers)
         data = response_cities.json()
         cities_list = []
         for destination in data['prices']:
             cities_list.append(destination['city'])
         return cities_list
+
+    def get_users_email(self):
+        response_users = requests.get(url=f"{self.url}/users", headers=self.headers)
+        data = response_users.json()
+        users_list = []
+        for user in data['users']:
+            users_list.append(user['email'])
+        return users_list
+
+    def post_user_info(self, firstname, lastname, email):
+        new_user = {
+                'user': {
+                    'firstName': firstname,
+                    'lastName': lastname,
+                    'email': email
+                }}
+        try:
+            post_to_users = requests.post(url=f"{self.url}users", headers=self.headers, json=new_user)
+            post_to_users.raise_for_status()
+        except Exception as error:
+            print(error)
