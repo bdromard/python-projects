@@ -60,15 +60,14 @@ class FlightSearch:
         response = requests.get(url=TEQUILA_SEARCH_URL, headers=search_headers, params=search_query)
         response.raise_for_status()
         data = response.json()
-        print(data)
+    
         # New request for data if there are no results for direct flights.
         if data['_results'] == 0:
             print(f'Pas de vol direct disponible pour {destination_code}')
-            search_query['max_stopovers'] = 1
+            search_query['max_stopovers'] = 2
             new_response = requests.get(url=TEQUILA_SEARCH_URL, headers=search_headers, params=search_query)
             new_response.raise_for_status()
             data = new_response.json()
-            print(data)
         
         try:
             flight_data = FlightData(
@@ -80,17 +79,9 @@ class FlightSearch:
                 depart_from=data['data'][0]['route'][0]['local_departure'].split('T')[0],
                 return_date=data['data'][0]['route'][1]['local_departure'].split('T')[0],
                 stop_overs=1,
-                via_city="Dubai"
-            )
+                via_city=data['data'][0]['cityTo']           
+                )
         except Exception as error:
             print(error)
         else: 
-            print(f'{flight_data.destination} : €{flight_data.price}')
-   
-            data_for_sheety = {
-                'city': flight_data.destination,
-                'iataCode': flight_data.airport_destination,
-                'lowestPrice': flight_data.price
-            }
-
-            return data_for_sheety
+            return flight_data

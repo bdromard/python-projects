@@ -17,9 +17,11 @@ for city in sheet_data:
     if flights_data == None:
         print('Pas de vol pour cette destination')
         continue
-    price = {'lowestPrice': flights_data['lowestPrice']}
+    price = {'lowestPrice': flights_data['price']}
     city.update(price)
-
+    print(f'Low price alert! Only €{price} from {flights_data["origin"]}-{flights_data["airport_origin"]}' 
+          f'to {flights_data["destination"]}, from {flights_data["depart_from"]} to {flights_data["return_date"]}.')
+    print(f'Flight has {flights_data["stops_over"]}, via {flights_data["via_city"]}')
 # Send data to sheet
 data_mng.put_to_sheety(sheet_data)
 

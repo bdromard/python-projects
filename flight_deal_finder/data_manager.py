@@ -26,12 +26,14 @@ class DataManager:
             response.raise_for_status()
 
     def get_data(self):
-        response = requests.get(url=f"{self.url}prices", headers=self.headers)
+        response_data = requests.get(url=f"{self.url}prices", headers=self.headers)
+        response_data.raise_for_status()
         data = response.json()
         return data
 
     def get_cities(self):
         response_cities = requests.get(url=f"{self.url}prices", headers=self.headers)
+        response_cities.raise_for_status()
         data = response_cities.json()
         cities_list = []
         for destination in data['prices']:
