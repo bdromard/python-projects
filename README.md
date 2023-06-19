@@ -1,8 +1,8 @@
-# Python Projects
+# <h1>Python Projects</h1>
 
-Projects and exercizes in Python, following Angela Yu's Udemy course "100 Days of Code".
+<h2>Projects and exercises in Python, following Angela Yu's Udemy course "100 Days of Code".</h2>
 
-<ul> <h2>List of projects</h2>
+<ul> <h3>List of projects</h3>
   <li>Mail Merge Project Start: Automatic letter sender. Exercize on script automation and file system manipulation.</li> 
   <li>ada_allumettes: Weekly exercize from Ada Tech School, made in Python. Two-player game involving matches.</li>
   <li>day-20-snake: Recreation of the popular Snake video game. Object Oriented Programming. Library: turtle.</li>
