@@ -52,12 +52,10 @@ sp = spotipy.Spotify(auth_manager=sp_auth)
 # TODO : get songs URIs from songs array
 year = date_for_billboard_query.split('-')[0]
 
-#songs_uris = [sp.search(q=f'track:{song} year:{year}', type='track', limit=1)['tracks']['items'][0]['id'] for song in songs]
 songs_uris = [search_song_id_on_spotify(song, year) for song in songs if search_song_id_on_spotify(song, year) is not None]
 
 # TODO : create a playlist from user input
 playlist = sp.user_playlist_create(user=USER_ID, name=f'{date_for_billboard_query} Billboard 100', public=False)
-#print(sp.user_playlists(user=USER_ID))
 
 # TODO : for each song in songs array, add to playlist
 sp.playlist_add_items(playlist_id=playlist['id'], items=songs_uris)
