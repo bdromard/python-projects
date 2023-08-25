@@ -11,14 +11,14 @@
   <li><b>day-25-csv-weather</b>: Introduction to CSV files manipulation with the library Pandas. </li>
   <li><b>day-27</b>: Introduction to the Tkinter GUI library. Miles / kilometers converters ; testing different Tkinter widgets.</li>
   <li><b>flash-card-project-start</b>: Application for English words memorizing, through the use of flash cards. Libraries: Tkinter, Pandas.</li>
-  <li>habit_tracker: Exercize on HTTP POST, PUT and DELETE requests with the Pixela API, a website for habit tracking. Creating an account, a graph, sending & deleting data through the API.</li>
-  <li>linkedin-apply: Creating a Selenium script to apply to Linkedin job offers. </li>
-  <li>Mail Merge Project Start: Automatic letter sender. Exercize on script automation and file system manipulation.</li> 
-  <li>mastermind: Weekly exercize from Ada Tech School, made in Python. Recreation of the game Mastermind.</li>
-  <li>password-manager-start: Application for managing passwords, with a password generating module. Libraries: Tkinter, json.</li>
-  <li>pomodoro: Application for time management, using the Pomodoro technique for better focus. Library: Tkinter.</li>
-  <li>quizzler: Quiz game, with questions / answers acquired through API requests. Libraries: Requests, json, Tkinter.</li>
-  <li>smtplib: Exercize on email automation, using SMTP protocol. Libraries: smtplib, pandas.</li>
-  <li>us-states-game-start: Guessing game on U.S.A. states. Libraries: turtle, pandas.</li>
-  <li>stock-news-extrahard-start: Exercise on API requests. Combining a stock market API with a general news API.</li>
+  <li><b>habit_tracker</b>: Exercize on HTTP POST, PUT and DELETE requests with the Pixela API, a website for habit tracking. Creating an account, a graph, sending & deleting data through the API.</li>
+  <li><b>linkedin</b>-apply: Creating a Selenium script to apply to Linkedin job offers. </li>
+  <li><b>Mail</b> Merge Project Start: Automatic letter sender. Exercize on script automation and file system manipulation.</li> 
+  <li><b>mastermind</b>: Weekly exercize from Ada Tech School, made in Python. Recreation of the game Mastermind.</li>
+  <li><b>password</b>-manager-start: Application for managing passwords, with a password generating module. Libraries: Tkinter, json.</li>
+  <li><b>pomodoro</b>: Application for time management, using the Pomodoro technique for better focus. Library: Tkinter.</li>
+  <li><b>quizzler</b>: Quiz game, with questions / answers acquired through API requests. Libraries: Requests, json, Tkinter.</li>
+  <li><b>smtplib</b>: Exercize on email automation, using SMTP protocol. Libraries: smtplib, pandas.</li>
+  <li><b>us-states-game-start</b>: Guessing game on U.S.A. states. Libraries: turtle, pandas.</li>
+  <li><b>stock-news-extrahard-start</b>: Exercise on API requests. Combining a stock market API with a general news API.</li>
 </ul>
